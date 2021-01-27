@@ -11,4 +11,5 @@ WORKDIR /cassandra-web
 RUN gem install bundler -v $BUNDLERVERSION && \
     bundle install
 # CMD cassandra-web --hosts CASSANDRA_HOST --port $CASSANDRA_PORT --username="$CASSANDRA_USERNAME" --password="$CASSANDRA_PASSWORD"
+EXPOSE 3000
 CMD cassandra-web --hosts CASSANDRA_HOST --port $CASSANDRA_PORT
